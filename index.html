@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Title</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-for-searchForm.css">
+
+    <script src="https://kit.fontawesome.com/3e58fdca93.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="big_div">
+            <div class="main_div">
+                <div class="s01">
+                    <h1 class="main_heading">Your way to Montenegro</h1>
+                    <ul class="list_of_tabs">
+                        <li class="active"><a href="#hotels">Hotels</a></li>
+                        <li><a href="#hotels">Villas</a></li>
+                        <li><a href="#cars">Cars</a></li>
+                        <li><a href="#transfers">Transfers</a></li>
+                        <li><a href="#thingToDo">Thing to do</a></li>
+                        <li><a href="#charter">Charter</a></li>
+                    </ul>
+                    <form>
+                        <div class="inner-form">
+                            <div class="input-field first-wrap">
+                                <input id="goingTo" type="button" value="Going to"
+                                    onclick="openDestinationSelector()" />
+                            </div>
+                            <div class="input-field second-wrap">
+                                <input id="dates" type="button" value="Dates" onclick="openDatesSelector()" />
+                                <span class="subtext" id="">Nov 7 - Nov 11</span>
+                            </div>
+                            <div class="input-field">
+                                <input id="travelers" type="button" value="Travelers"
+                                    onclick="openTravelersSelector()" />
+                                <span class="subtext" id="">2 travelers, 1 room</span>
+                            </div>
+                            <div class="input-field third-wrap">
+                                <button class="btn-search" type="button">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <nav class="navbar">
+            <a href="#">WHERE?</a>
+            <a href="#">ADRIATIC</a>
+            <a href="#">ROMANCE</a>
+            <a href="#"><img src="Images/book.png"></a>
+            <a href="#">MOUNTAINS</a>
+            <a href="#">ADRENALINE</a>
+            <a href="#">TEMPER</a>
+        </nav>
+    </div>
+
+    <!-- Where sekcija -->
+
+    <section class="section">
+        <div class="section-content">
+            <h1>Where?</h1>
+            <p class="where_paragh"><span>Montenegro</span> is a captivating country in Southeastern Europe, nestled
+                along the stunning <span>Adriatic Sea</span>. Its diverse landscape features a breathtaking coastline
+                with gems like the Bay of Kotor, often referred to as Europe's southernmost fjord. Coastal towns like
+                <span>Kotor, Budva,</span> and <span>Herceg Novi</span> showcase medieval architecture, charming old
+                towns, and vibrant nightlife.
+                Inland, you'll find the majestic <span>Lovćen</span> and <span>Durmitor</span> mountain ranges, hosting
+                <span>Lovćen National Park</span> and <span>Durmitor National Park</span>. These areas boast rugged
+                landscapes, deep canyons, and dense forests, providing a haven for outdoor enthusiasts with activities
+                such as hiking, rafting, and winter sports. <br>
+                <span>Montenegro</span> is home to cultural treasures like the <span>Ostrog Monastery</span>, perched on
+                a vertical cliff, and historical sites such as the ancient town of <span>Stari Bar</span>. The country's
+                largest lake, <span>Skadar</span>, straddles the border with Albania and is known for its diverse
+                ecosystem, making it a haven for birdwatchers and nature lovers.
+                Overall, <span>Montenegro's</span> harmonious blend of natural beauty, historical charm, and cultural
+                richness makes it a must-visit destination for any traveler.
+            </p>
+        </div>
+    </section>
+
+    <!-- Adriatic sekcija -->
+
+    <div class="container_adriatic">
+        <div class="left-side">
+            <div class="slider">
+                <!-- Ovdje dodajte slike za slider -->
+                <img src="Images/ADRIATIC_1.jpg" alt="Slika 1">
+                <img src="Images/ADRIATIC_2.jpg" alt="Slika 2">
+                <img src="Images/ADRIATIC_3.jpg" alt="Slika 3">
+                <img src="Images/ADRIATIC_4.jpg" alt="Slika 4">
+                <img src="Images/ADRIATIC_5.jpg" alt="Slika 5">
+                <!-- Dodajte koliko god slika želite -->
+            </div>
+            <div class="prev">&#10094;</div>
+            <div class="next">&#10095;</div>
+        </div>
+        <div class="right-side">
+            <h1>Adriatic</h1>
+            <p>Embark on an enchanting voyage across the sparkling <span>Adriatic Sea</span>,
+                unveiling the treasures that grace the <span>Montenegrin coastline</span>.
+                The gentle sway of charter boats introduces you to a world where each wave
+                carries tales of hidden coves and picturesque fishing villages. As you sail along the shores,
+                the ancient towns of <span>Kotor and Budva</span> emerge like time-worn jewels,
+                steeped in history and surrounded by the splendor of the Adriatic.
+                Snorkel in crystalline waters, bask in the <span>Mediterranean sun</span>, and indulge in the delectable
+                local seafood.
+                The coastal allure, complemented by <span>Montenegro's</span> warm hospitality,
+                creates a seamless fusion of past and present, making this Adriatic adventure a sojourn into a realm
+                where
+                time dances with the rhythm of the sea. </p>
+        </div>
+    </div>
+
+
+    <!-- Romance sekcija -->
+
+    <div class="container_romance">
+        <div class="left-side_romance"></div>
+        <div class="right-side_romance"></div>
+        <h1>Rom<span>ance</span></h1>
+    </div>
+
+    <!-- Mountains sekcija-->
+
+    <div class="container_mountains">
+        <div class="slider_mountains">
+            <div class="slides_mountains">
+                <div class="slide"><img src="Images/MOUNTAINS_Komovi.jpg" alt="Mountain 1"></div>
+                <div class="slide"><img src="Images/MOUNTAINS_Bjelasica.jpg" alt="Mountain 2"></div>
+                <div class="slide"><img src="Images/MOUNTAINS_Bjelasica_Biogradsko.jpg" alt="Mountain 3"></div>
+                <div class="slide"><img src="Images/MOUNTAINS_Durmitor.jpg" alt="Mountain 4"></div>
+                <div class="slide"><img src="Images/MOUNTAINS_Durmitor_1.jpg" alt="Mountain 5"></div>
+                <div class="slide"><img src="Images/MOUNTAINS_Lovcen.jpg" alt="Mountain 6"></div>
+                <div class="slide"><img src="Images/MOUNTAINS_Prokletije.jpg" alt="Mountain 7"></div>
+            </div>
+
+            <div class="controls_mountains">
+                <div class="col-1">
+                    <div class="arrow prev_arr">&#10094;</div>
+                    <h1>Komovi</h1>
+                    <div class="arrow next_arr">&#10095;</div>
+                </div>
+                <div class="col-2">
+                    <p>In the northeastern reaches, the <span>Komovi Mountains</span> beckon with alpine allure.
+                        <span>Kom Kučki, Kom Vasojevićki</span>, and <span>Kom Ljevoriječki</span>, the trilogy of
+                        peaks,
+                        guard the secrets of their scenic landscapes. Hiking through these summits
+                        reveals vistas that blur the lines between earth and sky.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adrenaline container -->
+
+    <div class="container_adrenaline">
+        <div class="image_container">
+            <div class="image_item">
+                <img src="Images/ADRENALIN_Rafting.jpg" alt="Slika 1">
+                <div class="overlay">
+                    <div class="content_for_adrenaline">
+                        <h1>Rafting</h1>
+                        <p>In Montenegro, the meandering rivers offer thrilling rafting experiences amidst stunning
+                            landscapes. The Tara River Canyon, Europe's deepest canyon, is a haven for rafting
+                            enthusiasts. The journey down the Tara River, known as the "Tear of Europe," is a rush of
+                            adrenaline as you navigate through crystal-clear waters, sheer cliffs, and untouched
+                            wilderness. The Tara River is renowned for its challenging rapids and breathtaking scenery,
+                            making it a must-try adventure for those seeking an exhilarating rafting experience. </p>
+                        <div class="icons">
+                            <img src="Icons/close_pop_up.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image_item">
+                <img src="Images/ADRENALIN_Canyoning.jpg" alt="Slika 2">
+                <div class="overlay">
+                    <div class="content_for_adrenaline">
+                        <h1>Canyoning</h1>
+                        <p>Montenegro's diverse topography creates a playground for canyoning enthusiasts. The canyons,
+                            carved by rivers and time, provide a natural adventure course. The Nevidio Canyon, known as
+                            the "Unseen Canyon," is a popular canyoning destination. Exploring this narrow gorge
+                            involves rappelling down waterfalls, swimming through crystal-clear pools, and navigating
+                            the dramatic rocky terrain. Canyoning in Montenegro is not only an adrenaline-pumping
+                            activity but also an opportunity to immerse yourself in the untouched beauty of the
+                            country's canyons. </p>
+                        <div class="icons">
+                            <img src="Icons/close_pop_up.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image_item">
+                <img src="Images/ADRENALIN_Kitesurf.jpg" alt="Slika 3">
+                <div class="overlay">
+                    <div class="content_for_adrenaline">
+                        <h1>Kite Surfing</h1>
+                        <p>For water sports enthusiasts, Montenegro's Adriatic coastline beckons with ideal conditions
+                            for kite surfing. Spots like Ulcinj and Ada Bojana are known for their consistent winds and
+                            wide sandy beaches, providing the perfect setting for kite surfing adventures. Beginners can
+                            take lessons from local instructors, while experienced kite surfers can enjoy the thrill of
+                            riding the waves and feeling the wind under their kites against the backdrop of Montenegro's
+                            picturesque coastal scenery. </p>
+                        <div class="icons">
+                            <img src="Icons/close_pop_up.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image_item">
+                <img src="Images/ADRENALIN_Paragliding.jpg" alt="Slika 4">
+                <div class="overlay">
+                    <div class="content_for_adrenaline">
+                        <h1>Paragliding</h1>
+                        <p>For those seeking the ultimate aerial adventure, paragliding in Montenegro offers
+                            breathtaking views of the mountains, lakes, and coastline. Locations like Žabljak, nestled
+                            in the Durmitor National Park, provide a surreal backdrop for paragliding. Take to the skies
+                            and soar over pristine landscapes, experiencing a sense of freedom as you glide above the
+                            rugged mountain terrain or descend towards the serene beauty of Lake Skadar. Tandem flights
+                            with experienced pilots are available for those new to paragliding, offering a unique
+                            perspective of Montenegro's natural wonders. </p>
+                        <div class="icons">
+                            <img src="Icons/close_pop_up.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Temper container -->
+
+    <div class="temper-main">
+        <h1>Temper</h1>
+        <div class="container_temper">
+            <div class="temper_image_container">
+                <img src="Images/TEMPER001.jpg" alt="Slika 1">
+                <div class="img-caption">Naslov slike 1</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER002.jpg" alt="Slika 2">
+                <div class="img-caption">Naslov slike 2</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER003.jpg" alt="Slika 3">
+                <div class="img-caption">Naslov slike 3</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER004.jpg" alt="Slika 4">
+                <div class="img-caption">Naslov slike 4</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER005.jpg" alt="Slika 5">
+                <div class="img-caption">Naslov slike 5</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER006.jpg" alt="Slika 6">
+                <div class="img-caption">Naslov slike 6</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER007.jpg" alt="Slika 7">
+                <div class="img-caption">Naslov slike 7</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER008.jpg" alt="Slika 8">
+                <div class="img-caption">Naslov slike 8</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER009.jpg" alt="Slika 9">
+                <div class="img-caption">Naslov slike 9</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER0010.jpg" alt="Slika 10">
+                <div class="img-caption">Naslov slike 10</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER0011.jpg" alt="Slika 11">
+                <div class="img-caption">Naslov slike 11</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER0012.jpg" alt="Slika 12">
+                <div class="img-caption">Naslov slike 12</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER0014.jpg" alt="Slika 13">
+                <div class="img-caption">Naslov slike 13</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER0015.jpg" alt="Slika 14">
+                <div class="img-caption">Naslov slike 14</div>
+            </div>
+            <div class="temper_image_container">
+                <img src="Images/TEMPER0016.jpg" alt="Slika 15">
+                <div class="img-caption">Naslov slike 15</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script-for-slider.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

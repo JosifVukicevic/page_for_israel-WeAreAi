@@ -1,0 +1,505 @@
+@font-face {
+  font-family: 'Bayshore-ForHeadings';
+  src: url('fonts/Fonts_English/Bayshore/Bayshore.otf') format('opentype'),
+    url('fonts/Fonts_English/Bayshore/Bayshore.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-ForOther';
+  src: url('fonts/Fonts_English/Inter/Inter-Regular.otf') format('opentype');
+}
+
+body {
+  font-family: 'Inter-ForOther';
+  margin: 0;
+}
+
+.navbar {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  margin: 0 20px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.navbar:hover {
+  background-color: #545353b9;
+  transition: 0.8s ease-in-out;
+}
+
+.navbar:hover a {
+  color: white;
+}
+
+.navbar a:hover {
+  color: rgb(182, 174, 174);
+}
+
+.navbar img {
+  max-width: 80px;
+  vertical-align: middle;
+}
+
+.main_heading {
+  font-family: 'Bayshore-ForHeadings';
+  font-weight: 300;
+  font-size: 140px;
+  margin-bottom: 110px;
+}
+
+.main_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  margin-top: auto;
+  align-items: center;
+}
+
+.s01 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('Images/NASLOVNA_hotels.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.navbar>a {
+  font-weight: bold;
+}
+
+form .inner-form input {
+  cursor: pointer;
+}
+
+#goingTo {
+  background-image: url('Icons/location_icon.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 40px;
+  margin-right: 130px;
+}
+
+#dates {
+  background-image: url('Icons/dates.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 40px;
+  margin-right: 130px;
+}
+
+#travelers {
+  background-image: url('Icons/travelers.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 40px;
+  margin-right: 130px;
+}
+
+
+.subtext {
+  font-size: 12px;
+  color: #888;
+  display: block;
+  margin-top: 5px;
+}
+
+.section {
+  background-image: url('Images/where_poz.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(198, 192, 192);
+}
+
+.where_paragh>span {
+  color: #191e3b;
+  font-weight: bold;
+}
+
+.where_paragh {
+  font-size: larger;
+}
+
+.section-content>h1 {
+  font-size: 80px;
+  color: #191e3b;
+}
+
+.section-content {
+  max-width: 80%;
+  padding: 20px;
+}
+
+/* Adriatic container */
+
+.container_adriatic {
+  height: 100vh;
+  display: flex;
+}
+
+.left-side {
+  width: 70%;
+  overflow: hidden;
+  position: relative;
+}
+
+.right-side {
+  width: 30%;
+  background-color: #002743;
+  padding: 20px;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 72px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.right-side>p>span {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.right-side p {
+  margin-left: 45px;
+  margin-right: 45px;
+  line-height: 1.5;
+  font-size: large;
+}
+
+.right-side h1 {
+  font-size: xxx-large;
+  margin-left: 45px;
+}
+
+.right-side {
+  color: #b4b3b3;
+}
+
+/* romance container */
+
+.container_romance {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.left-side_romance,
+.right-side_romance {
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.left-side_romance::before,
+.right-side_romance::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 0, 0.5);
+}
+
+.container_romance:hover .right-side_romance::before {
+  background: none;
+  transition: 0.8s ease-in-out;
+}
+
+.left-side_romance {
+  background-image: url('Images/ROMANCE_1.jpg');
+}
+
+.right-side_romance {
+  background-image: url('Images/ROMANCE_2.jpg');
+}
+
+.container_romance h1 {
+  text-align: center;
+  margin: 0;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.938);
+  font-size: 72px;
+}
+
+.container_romance:hover h1 span {
+  color: rgba(186, 180, 180, 0.737);
+}
+
+.container_romance h1 span {
+  color: #fff;
+}
+
+/* Mountains section */
+
+.container_mountains {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider_mountains {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides_mountains {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.controls_mountains {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls_mountains h1 {
+  color: white;
+  font-size: 72px;
+  letter-spacing: 0.1cm;
+}
+
+.controls .arrow {
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.controls .arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.arrow {
+  font-size: 72px;
+  color: white;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.prev_arr {
+  margin-left: 30px;
+}
+
+.next_arr {
+  margin-right: 30px;
+}
+
+.col-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.col-2 {
+  width: 70%;
+  text-align: center;
+}
+
+.col-2 p {
+  font-size: 24px;
+  color: rgba(240, 232, 232, 0.766);
+}
+
+.col-2 p span {
+  color: white;
+  font-weight: bold;
+}
+
+/* adrenaline section */
+
+.container_adrenaline {
+  height: 100%;
+}
+
+.image_container {
+  display: flex;
+  width: 100%;
+}
+
+.image_item {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.image_item img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: #3a6c61c7;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  transition: opacity 0.8s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.image_item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .content_for_adrenaline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content_for_adrenaline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
+
+.content_for_adrenaline h1 {
+  text-transform: uppercase;
+}
+
+.content_for_adrenaline p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* temper section */
+
+.container_temper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.temper_image_container {
+  position: relative;
+  display: flex;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+}
+
+.temper-main h1 {
+  font-size: 46px;
+  margin: 60px 0 60px 40px;
+  color: #191e3b;
+  font-weight: bold;
+}
+
+.temper_image_container img {
+  width: 100%;
+  height: auto;
+}
+
+.img-caption {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  background: rgba(58, 47, 30, 0.904);
+  padding: 10px 20px;
+}
+
+.temper_image_container:hover .img-caption {
+  opacity: 1;
+}
+
+.img-caption {
+  color: white;
+  font-size: 28px;
+}
+
