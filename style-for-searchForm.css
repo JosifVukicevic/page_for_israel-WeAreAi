@@ -3,7 +3,6 @@
   }
   
   .s01 {
-    /*height: 100vh;*/
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -172,18 +171,18 @@
     position: relative;
 }
 
-.list_of_tabs li.active::after {
+.list_of_tabs li.active-tab::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 3px; /* Visina linije */
-    background-color: orange; /* Boja linije */
+    height: 3px;
+    background-color: orange;
 }
 
 .list_of_tabs li:last-child {
-    margin-right: 0; /* Uklanja razmak za poslednju stavku */
+    margin-right: 0;
 }
 
 .list_of_tabs > li > a{

@@ -15,57 +15,57 @@
 
 <body>
 
-    <div class="container">
-        <div class="big_div">
-            <div class="main_div">
-                <div class="s01">
-                    <h1 class="main_heading">Your way to Montenegro</h1>
-                    <ul class="list_of_tabs">
-                        <li class="active"><a href="#hotels">Hotels</a></li>
-                        <li><a href="#hotels">Villas</a></li>
-                        <li><a href="#cars">Cars</a></li>
-                        <li><a href="#transfers">Transfers</a></li>
-                        <li><a href="#thingToDo">Thing to do</a></li>
-                        <li><a href="#charter">Charter</a></li>
-                    </ul>
-                    <form>
-                        <div class="inner-form">
-                            <div class="input-field first-wrap">
-                                <input id="goingTo" type="button" value="Going to"
-                                    onclick="openDestinationSelector()" />
-                            </div>
-                            <div class="input-field second-wrap">
-                                <input id="dates" type="button" value="Dates" onclick="openDatesSelector()" />
-                                <span class="subtext" id="">Nov 7 - Nov 11</span>
-                            </div>
-                            <div class="input-field">
-                                <input id="travelers" type="button" value="Travelers"
-                                    onclick="openTravelersSelector()" />
-                                <span class="subtext" id="">2 travelers, 1 room</span>
-                            </div>
-                            <div class="input-field third-wrap">
-                                <button class="btn-search" type="button">Search</button>
-                            </div>
+<div class="container" id="main-container">
+    <div class="big_div">
+        <div class="main_div">
+            <div class="s01">
+                <h1 class="main_heading">Your way to Montenegro</h1>
+                <ul class="list_of_tabs">
+                    <li class="active-tab"><a href="#hotels" onclick="changeTab('hotels')">Hotels</a></li>
+                    <li><a href="#villas" onclick="changeTab('villas')">Villas</a></li>
+                    <li><a href="#cars" onclick="changeTab('cars')">Cars</a></li>
+                    <li><a href="#transfers" onclick="changeTab('transfers')">Transfers</a></li>
+                    <li><a href="#thingToDo" onclick="changeTab('thingToDo')">Thing to do</a></li>
+                    <li><a href="#charter" onclick="changeTab('charter')">Charter</a></li>
+                </ul>
+                <form>
+                    <div class="inner-form">
+                        <div class="input-field first-wrap">
+                            <input id="goingTo" type="button" value="Going to" onclick="openDestinationSelector()" />
                         </div>
-                    </form>
-                </div>
-
+                        <div class="input-field second-wrap">
+                            <input id="dates" type="button" value="Dates" onclick="openDatesSelector()" />
+                            <span class="subtext" id="">Nov 7 - Nov 11</span>
+                        </div>
+                        <div class="input-field">
+                            <input id="travelers" type="button" value="Travelers" onclick="openTravelersSelector()" />
+                            <span class="subtext" id="">2 travelers, 1 room</span>
+                        </div>
+                        <div class="input-field third-wrap">
+                            <button class="btn-search" type="button">Search</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-        <nav class="navbar">
-            <a href="#">WHERE?</a>
-            <a href="#">ADRIATIC</a>
-            <a href="#">ROMANCE</a>
-            <a href="#"><img src="Images/book.png"></a>
-            <a href="#">MOUNTAINS</a>
-            <a href="#">ADRENALINE</a>
-            <a href="#">TEMPER</a>
-        </nav>
     </div>
+    <nav class="navbar">
+        <a href="#where_sekc">WHERE?</a>
+        <a href="#adriatic_sekc">ADRIATIC</a>
+        <a href="#romance_sekc">ROMANCE</a>
+        <a href="#"><img src="Images/book.png"></a>
+        <a href="#mountains_sekc">MOUNTAINS</a>
+        <a href="#adrenaline_sekc">ADRENALINE</a>
+        <a href="#temper_sekc">TEMPER</a>
+    </nav>
+</div>
+
+
+    <div class="after-container"></div>
 
     <!-- Where sekcija -->
 
-    <section class="section">
+    <section class="section" id="where_sekc">
         <div class="section-content">
             <h1>Where?</h1>
             <p class="where_paragh"><span>Montenegro</span> is a captivating country in Southeastern Europe, nestled
@@ -89,19 +89,28 @@
 
     <!-- Adriatic sekcija -->
 
-    <div class="container_adriatic">
+    <div class="container_adriatic" id="adriatic_sekc">
         <div class="left-side">
             <div class="slider">
-                <!-- Ovdje dodajte slike za slider -->
-                <img src="Images/ADRIATIC_1.jpg" alt="Slika 1">
-                <img src="Images/ADRIATIC_2.jpg" alt="Slika 2">
-                <img src="Images/ADRIATIC_3.jpg" alt="Slika 3">
-                <img src="Images/ADRIATIC_4.jpg" alt="Slika 4">
-                <img src="Images/ADRIATIC_5.jpg" alt="Slika 5">
-                <!-- Dodajte koliko god slika želite -->
+                <div>
+                    <img src="Images/ADRIATIC_1.jpg" alt="Slika 1">
+                </div>
+                <div>
+                    <img src="Images/ADRIATIC_2.jpg" alt="Slika 2">
+                </div>
+                <div>
+                    <img src="Images/ADRIATIC_3.jpg" alt="Slika 3">
+                </div>
+                <div>
+                    <img src="Images/ADRIATIC_4.jpg" alt="Slika 4">
+                </div>
+                <div>
+                    <img src="Images/ADRIATIC_5.jpg" alt="Slika 5">
+                </div>
             </div>
             <div class="prev">&#10094;</div>
             <div class="next">&#10095;</div>
+            <div class="dots_adriatic"></div>
         </div>
         <div class="right-side">
             <h1>Adriatic</h1>
@@ -123,7 +132,7 @@
 
     <!-- Romance sekcija -->
 
-    <div class="container_romance">
+    <div class="container_romance" id="romance_sekc">
         <div class="left-side_romance"></div>
         <div class="right-side_romance"></div>
         <h1>Rom<span>ance</span></h1>
@@ -131,7 +140,7 @@
 
     <!-- Mountains sekcija-->
 
-    <div class="container_mountains">
+    <div class="container_mountains" id="mountains_sekc">
         <div class="slider_mountains">
             <div class="slides_mountains">
                 <div class="slide"><img src="Images/MOUNTAINS_Komovi.jpg" alt="Mountain 1"></div>
@@ -157,17 +166,18 @@
                         reveals vistas that blur the lines between earth and sky.
                     </p>
                 </div>
+                <div class="dots_mountains"></div>
             </div>
         </div>
     </div>
 
     <!-- Adrenaline container -->
 
-    <div class="container_adrenaline">
+    <div class="container_adrenaline" id="adrenaline_sekc">
         <div class="image_container">
-            <div class="image_item">
+            <div class="image_item" onclick="toggleOverlay(this)">
                 <img src="Images/ADRENALIN_Rafting.jpg" alt="Slika 1">
-                <div class="overlay">
+                <div class="overlay" id="overlay">
                     <div class="content_for_adrenaline">
                         <h1>Rafting</h1>
                         <p>In Montenegro, the meandering rivers offer thrilling rafting experiences amidst stunning
@@ -177,14 +187,14 @@
                             wilderness. The Tara River is renowned for its challenging rapids and breathtaking scenery,
                             making it a must-try adventure for those seeking an exhilarating rafting experience. </p>
                         <div class="icons">
-                            <img src="Icons/close_pop_up.png">
+                            <img src="Icons/close.png" alt="Error" onclick="closePopUp(event)">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="image_item">
+            <div class="image_item" onclick="toggleOverlay(this)">
                 <img src="Images/ADRENALIN_Canyoning.jpg" alt="Slika 2">
-                <div class="overlay">
+                <div class="overlay" id="overlay">
                     <div class="content_for_adrenaline">
                         <h1>Canyoning</h1>
                         <p>Montenegro's diverse topography creates a playground for canyoning enthusiasts. The canyons,
@@ -195,14 +205,14 @@
                             activity but also an opportunity to immerse yourself in the untouched beauty of the
                             country's canyons. </p>
                         <div class="icons">
-                            <img src="Icons/close_pop_up.png">
+                            <img src="Icons/close.png" alt="Error" onclick="closePopUp(event)">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="image_item">
+            <div class="image_item" onclick="toggleOverlay(this)">
                 <img src="Images/ADRENALIN_Kitesurf.jpg" alt="Slika 3">
-                <div class="overlay">
+                <div class="overlay" id="overlay">
                     <div class="content_for_adrenaline">
                         <h1>Kite Surfing</h1>
                         <p>For water sports enthusiasts, Montenegro's Adriatic coastline beckons with ideal conditions
@@ -212,14 +222,14 @@
                             riding the waves and feeling the wind under their kites against the backdrop of Montenegro's
                             picturesque coastal scenery. </p>
                         <div class="icons">
-                            <img src="Icons/close_pop_up.png">
+                            <img src="Icons/close.png" alt="Error" onclick="closePopUp(event)">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="image_item">
+            <div class="image_item" onclick="toggleOverlay(this)">
                 <img src="Images/ADRENALIN_Paragliding.jpg" alt="Slika 4">
-                <div class="overlay">
+                <div class="overlay" id="overlay">
                     <div class="content_for_adrenaline">
                         <h1>Paragliding</h1>
                         <p>For those seeking the ultimate aerial adventure, paragliding in Montenegro offers
@@ -230,7 +240,7 @@
                             with experienced pilots are available for those new to paragliding, offering a unique
                             perspective of Montenegro's natural wonders. </p>
                         <div class="icons">
-                            <img src="Icons/close_pop_up.png">
+                            <img src="Icons/close.png" alt="Error" onclick="closePopUp(event)">
                         </div>
                     </div>
                 </div>
@@ -240,7 +250,7 @@
 
     <!-- Temper container -->
 
-    <div class="temper-main">
+    <div class="temper-main" id="temper_sekc">
         <h1>Temper</h1>
         <div class="container_temper">
             <div class="temper_image_container">
@@ -306,8 +316,10 @@
         </div>
     </div>
 
-
+    <script src="script-for-sliderMountains.js"></script>
+    <script src="script-for-closePopUp.js"></script>
     <script src="script-for-slider.js"></script>
+    <script src="script-for-tabs.js"></script>
     <script src="script.js"></script>
 
 </body>

@@ -1,33 +1,62 @@
-const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
+document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.slider');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const dotsContainer = document.querySelector('.dots_adriatic');
     let currentIndex = 0;
-    const slides = document.querySelectorAll('.slider img');
-
-    showSlide(currentIndex);
 
     function showSlide(index) {
-        slides.forEach((slide) => {
-            slide.style.display = 'none';
+        const slides = document.querySelectorAll('.slider div');
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+            }
         });
-        slides[index].style.display = 'block';
+        updateDots(index);
     }
 
     function prevSlide() {
-        currentIndex--;
-        if (currentIndex < 0) {
-            currentIndex = slides.length - 1;
-        }
+        currentIndex = (currentIndex === 0) ? slider.children.length - 1 : currentIndex - 1;
         showSlide(currentIndex);
     }
 
     function nextSlide() {
-        currentIndex++;
-        if (currentIndex >= slides.length) {
-            currentIndex = 0;
-        }
+        currentIndex = (currentIndex === slider.children.length - 1) ? 0 : currentIndex + 1;
         showSlide(currentIndex);
     }
 
-    prevBtn.addEventListener('click', prevSlide);
-    nextBtn.addEventListener('click', nextSlide);
+    function createDots() {
+        const slides = document.querySelectorAll('.slider div');
+        slides.forEach((slide, i) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (i === 0) {
+                dot.classList.add('active');
+            }
+            dot.addEventListener('click', () => {
+                showSlide(i);
+            });
+            dotsContainer.appendChild(dot);
+        });
+    }
+
+    function updateDots(index) {
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+    createDots();
+    showSlide(currentIndex);
+});
+
