@@ -25,83 +25,112 @@ function changeTab(tabName) {
     switch (tabName) {
         case 'hotels':
             mainContainer.style.backgroundImage = 'url("Images/NASLOVNA_hotels.jpg")';
+            showForm('hotels-form');
             break;
         case 'villas':
             mainContainer.style.backgroundImage = 'url("Images/NASLOVNA_villas.jpg")';
+            showForm('villas-form');
             break;
         case 'cars':
             mainContainer.style.backgroundImage = 'url("Images/NASLOVNA_cars.jpg")';
+            showForm('cars-form');
             break;
         case 'transfers':
             mainContainer.style.backgroundImage = 'url("Images/NASLOVNA_transfers.jpg")';
+            showForm('transfers-form');
             break;
         case 'thingToDo':
             mainContainer.style.backgroundImage = 'url("Images/NASLOVNA_thingsToDo.jpg")';
+            showForm('thingToDo-form');
             break;
         case 'charter':
             mainContainer.style.backgroundImage = 'url("Images/NASLOVNA_charter.jpg")';
+            showForm('charter-form');
             break;
         default:
             break;
     }
 }
 
-// Prvi tab - 'hotels'
+function showForm(formId) {
+    var forms = document.querySelectorAll('form');
+    forms.forEach(function(form) {
+        if (form.id === formId) {
+            form.style.display = 'block';
+        } else {
+            form.style.display = 'none';
+        }
+    });
+}
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Event listeneri za svako input polje
-    var inputFields = document.querySelectorAll('.input-field input[type="button"]');
-    inputFields.forEach(function(input) {
-        input.addEventListener('click', function() {
-            // Pozivanje funkcije na osnovu ID-a input polja
-            var inputId = input.id;
-            switch (inputId) {
-                case 'goingTo':
-                    openDestinationSelector();
-                    break;
-                case 'dates':
-                    openDatesSelector();
-                    break;
-                case 'travelers':
-                    openTravelersSelector();
-                    break;
-                default:
-                    break;
-            }
-        });
+
+
+// Hover ikonica
+
+var hoverElements = document.querySelectorAll(".goingTo");
+
+hoverElements.forEach(function(element) {
+    element.addEventListener("mouseover", function() {
+        var icon = element.querySelector(".iconForHover");
+        icon.src = "Icons/location_icon_white.png";
+    });
+
+    element.addEventListener("mouseout", function() {
+        var icon = element.querySelector(".iconForHover");
+        icon.src = "Icons/location_icon.png";
     });
 });
 
+// SEARCH BAR
+
+// prikazivanje i uklanjanje DESTINATION bara
 
 function openDestinationSelector() {
-    toggleWindow('destinationWindow');
-}
-
-function openDatesSelector() {
-    toggleWindow('datesWindow');
-}
-
-function openTravelersSelector() {
-    toggleWindow('travelersWindow');
-}
-
-function toggleWindow(windowId) {
-    var window = document.getElementById(windowId);
-    if (window.style.display === 'none' || window.style.display === '') {
-        window.style.display = 'block';
+    var chooseDestination = document.getElementById("chooseDestination");
+    if (chooseDestination.style.display === "none" || chooseDestination.style.display === "") {
+        chooseDestination.style.display = "block";
+        window.addEventListener("click", closeDestinationSelectorOutside);
     } else {
-        window.style.display = 'none';
+        chooseDestination.style.display = "none";
+        window.removeEventListener("click", closeDestinationSelectorOutside);
     }
 }
 
-// Zatvaranje prozora ako korisnik klikne van prozora
-document.addEventListener('click', function(event) {
-    var windows = document.querySelectorAll('.selector-window');
-    windows.forEach(function(window) {
-        if (event.target !== window && !window.contains(event.target)) {
-            window.style.display = 'none';
-        }
-    });
-});
+function closeDestinationSelectorOutside(event) {
+    var chooseDestination = document.getElementById("chooseDestination");
+    var goingToInput = document.getElementById("goingTo");
+    if (!chooseDestination.contains(event.target) && event.target !== goingToInput) {
+        chooseDestination.style.display = "none";
+        window.removeEventListener("click", closeDestinationSelectorOutside);
+    }
+}
 
 
+// prikazivanje i ukljanjanje TRAVELERS bara
+
+function openTravelersSelector() {
+    var dropdownTravelers = document.getElementById("dropdown-travelers");
+    if (dropdownTravelers.style.display === "none" || dropdownTravelers.style.display === "") {
+        dropdownTravelers.style.display = "block";
+        window.addEventListener("click", closeTravelersSelectorOutside);
+    } else {
+        dropdownTravelers.style.display = "none";
+        window.removeEventListener("click", closeTravelersSelectorOutside);
+    }
+}
+
+function closeTravelersSelectorOutside(event) {
+    var dropdownTravelers = document.getElementById("dropdown-travelers");
+    var travelersInput = document.getElementById("travelers");
+    if (!dropdownTravelers.contains(event.target) && event.target !== travelersInput) {
+        dropdownTravelers.style.display = "none";
+        window.removeEventListener("click", closeTravelersSelectorOutside);
+    }
+}
+
+
+
+// Tabovi
+
+
+// Main Search button

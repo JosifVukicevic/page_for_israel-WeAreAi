@@ -113,6 +113,14 @@ form .inner-form input {
   margin-right: 130px;
 }
 
+#type-of-villas {
+  background-image: url('Icons/Villas_type.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 40px;
+  margin-right: 130px;
+}
+
 
 .subtext {
   font-size: 12px;

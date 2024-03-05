@@ -15,10 +15,9 @@
 
 <body>
 
-<div class="container" id="main-container">
-    <div class="big_div">
-        <div class="main_div">
-            <div class="s01">
+    <div class="container" id="main-container">
+        <div class="big_div">
+            <div class="main_div">
                 <h1 class="main_heading">Your way to Montenegro</h1>
                 <ul class="list_of_tabs">
                     <li class="active-tab"><a href="#hotels" onclick="changeTab('hotels')">Hotels</a></li>
@@ -28,37 +27,254 @@
                     <li><a href="#thingToDo" onclick="changeTab('thingToDo')">Thing to do</a></li>
                     <li><a href="#charter" onclick="changeTab('charter')">Charter</a></li>
                 </ul>
-                <form>
-                    <div class="inner-form">
-                        <div class="input-field first-wrap">
-                            <input id="goingTo" type="button" value="Going to" onclick="openDestinationSelector()" />
+                <div class="s01">
+                    <!-- HOTELS FORM -->
+                    <form id="hotels-form" style="display: block;">
+                        <div class="inner-form">
+                            <div class="input-field first-wrap">
+                                <input id="goingTo" type="button" value="Going to"
+                                    onclick="openDestinationSelector()" />
+                                <div id="chooseDestination" class="choose">
+                                    <div class="searchBar">
+                                        <input type="text" id="destinationSearch" placeholder="Going to">
+                                    </div>
+                                    <hr>
+                                    <h4>Popular destinations</h4>
+                                    <ul class="select-option">
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle">Kotor</span>
+                                                <span class="sub-location">Kotor Old Town, Montenegro</span>
+                                            </div>
+                                        </li>
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle">Podgorica</span>
+                                                <span class="sub-location">Podgorica Capital City, Montenegro</span>
+                                            </div>
+                                        </li>
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle">Budva</span>
+                                                <span class="sub-location">Budva Municipality, Montenegro</span>
+                                            </div>
+                                        </li>
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle">Istanbul</span>
+                                                <span class="sub-location">Istanbul, Türkiye</span>
+                                            </div>
+                                        </li>
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle">Belgrade</span>
+                                                <span class="sub-location">Central Serbia, Serbia</span>
+                                            </div>
+                                        </li>
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle">Budapest</span>
+                                                <span class="sub-location">Hungary</span>
+                                            </div>
+                                        </li>
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle"></span>
+                                                <span class="sub-location"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="input-field second-wrap">
+                                <input id="dates" type="button" value="Dates" onclick="openDatesSelector()" />
+                                <span class="subtext" id="">Nov 7 - Nov 11</span>
+                            </div>
+                            <div class="input-field">
+                                <input id="travelers" type="button" value="Travelers"
+                                    onclick="openTravelersSelector()" />
+                                <span class="subtext" id="">2 travelers, 1 room</span>
+                            </div>
+                            <div class="input-field third-wrap">
+                                <button class="btn-search" type="button">Search</button>
+                            </div>
                         </div>
-                        <div class="input-field second-wrap">
-                            <input id="dates" type="button" value="Dates" onclick="openDatesSelector()" />
-                            <span class="subtext" id="">Nov 7 - Nov 11</span>
+                    </form>
+                    <!-- VILLAS FORM -->
+                    <form id="villas-form" style="display: none;">
+                        <div class="inner-form">
+                            <div class="input-field first-wrap">
+                                <input id="goingTo" type="button" value="Going to"
+                                    onclick="openDestinationSelector()" />
+                                <div id="chooseDestination" class="choose">
+                                    <div class="searchBar">
+                                        <input type="text" id="destinationSearch" placeholder="Going to">
+                                    </div>
+                                    <hr>
+                                    <h4>Popular destinations</h4>
+                                    <ul class="select-option">
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle">Kotor</span>
+                                                <span class="sub-location">Kotor Old Town, Montenegro</span>
+                                            </div>
+                                        </li>
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle">Podgorica</span>
+                                                <span class="sub-location">Podgorica Capital City, Montenegro</span>
+                                            </div>
+                                        </li>
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle">Budva</span>
+                                                <span class="sub-location">Budva Municipality, Montenegro</span>
+                                            </div>
+                                        </li>
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle">Istanbul</span>
+                                                <span class="sub-location">Istanbul, Türkiye</span>
+                                            </div>
+                                        </li>
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle">Belgrade</span>
+                                                <span class="sub-location">Central Serbia, Serbia</span>
+                                            </div>
+                                        </li>
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle">Budapest</span>
+                                                <span class="sub-location">Hungary</span>
+                                            </div>
+                                        </li>
+                                        <li id="goingTo-id" class="goingTo">
+                                            <img src="Icons/location_icon.png" alt="Error" class="iconForHover">
+                                            <div class="text">
+                                                <span class="locationTitle"></span>
+                                                <span class="sub-location"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="input-field second-wrap">
+                                <input id="dates" type="button" value="Dates" onclick="openDatesSelector()" />
+                                <span class="subtext" id="">Nov 7 - Nov 11</span>
+                            </div>
+                            <div class="input-field">
+                                <input id="type-of-villas" type="button" value="Choose" onclick="openTypeSelector()">
+                                <div id="options-type" style="display: none;">
+                                    <select>
+                                        <option value="villa">Villa</option>
+                                        <option value="apartment">Apartment</option>
+                                        <option value="hotel-room">Hotel Room</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <input id="travelers" type="button" value="Guests" onclick="openTravelersSelector()">
+                                <div id="dropdown-travelers" class="choose-travelers">
+                                    <div id="type-person">
+                                        <label>Adults</label>
+                                        <div class="">
+                                            <button id="minus_button_guests"></button>
+                                            <input type="text">
+                                            <button id="plus_button_guests"></button>
+                                        </div>
+                                    </div>
+                                    <div id="type-person">
+                                        <div class="centr">
+                                            <label>Adults</label>
+                                            <span>2 - 12 yo</span>
+                                        </div>
+                                        <div>
+                                            <button id="minus_button_guests"></button>
+                                            <input type="text">
+                                            <button id="plus_button_guests"></button>
+                                        </div>
+                                    </div>
+                                    <div id="type-person">
+                                        <label>Infants</label>
+                                        <span>Under 2 yo</span>
+                                        <div>
+                                            <button id="minus_button_guests"></button>
+                                            <input type="text">
+                                            <button id="plus_button_guests"></button>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <span></span>
+                                        <label>Pets Allowed</label>
+                                    </div>
+                                    <hr>
+                                    <h3>Configuration</h3>
+                                    <div id="type-config">
+                                        <label>Bedrooms</label>
+                                        <div>
+                                            <button id="minus_button_guests"></button>
+                                            <input type="text">
+                                            <button id="plus_button_guests"></button>
+                                        </div>
+                                    </div>
+                                    <div id="type-config">
+                                        <label>Bathrooms</label>
+                                        <div>
+                                            <button id="minus_button_guests"></button>
+                                            <input type="text">
+                                            <button id="plus_button_guests"></button>
+                                        </div>
+                                    </div>
+                                    <button>APPLY FILTERS</button>
+                                </div>
+                            </div>
+                            <div class="input-field third-wrap">
+                                <button class="btn-search" type="button">Search</button>
+                            </div>
                         </div>
-                        <div class="input-field">
-                            <input id="travelers" type="button" value="Travelers" onclick="openTravelersSelector()" />
-                            <span class="subtext" id="">2 travelers, 1 room</span>
-                        </div>
-                        <div class="input-field third-wrap">
-                            <button class="btn-search" type="button">Search</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                    <form id="cars-form" style="display:none;">
+                        <!-- Cars form -->
+                    </form>
+                    <form id="transfers-form" style="display:none;">
+                        <!-- Transfers form -->
+                    </form>
+                    <form id="thingToDo-form" style="display:none;">
+                        <!-- Thing to do form -->
+                    </form>
+                    <form id="charter-form" style="display:none;">
+                        <!-- Charter form -->
+                    </form>
+
+                    <!-- Kraj polja za tabove -->
+                </div>
             </div>
         </div>
+        <nav class="navbar">
+            <a href="#where_sekc">WHERE?</a>
+            <a href="#adriatic_sekc">ADRIATIC</a>
+            <a href="#romance_sekc">ROMANCE</a>
+            <a href="#"><img src="Images/book.png"></a>
+            <a href="#mountains_sekc">MOUNTAINS</a>
+            <a href="#adrenaline_sekc">ADRENALINE</a>
+            <a href="#temper_sekc">TEMPER</a>
+        </nav>
     </div>
-    <nav class="navbar">
-        <a href="#where_sekc">WHERE?</a>
-        <a href="#adriatic_sekc">ADRIATIC</a>
-        <a href="#romance_sekc">ROMANCE</a>
-        <a href="#"><img src="Images/book.png"></a>
-        <a href="#mountains_sekc">MOUNTAINS</a>
-        <a href="#adrenaline_sekc">ADRENALINE</a>
-        <a href="#temper_sekc">TEMPER</a>
-    </nav>
-</div>
 
 
     <div class="after-container"></div>
